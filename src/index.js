@@ -10,7 +10,23 @@ const Controller = Backbone.Router.extend({
         'home': '_handleHome',
         'canvas': '_handleCanvas',
         'login': '_handleLogin',
-        '*default': '_handleDeafulat'
+        '*default': '_handleDefault'
+    },
+
+    _handleHome: function() {
+
+    },
+
+    _handleCanvas: function() {
+
+    },
+
+    _handleLogin: function() {
+
+    },
+
+    _handleDefault: function() {
+        location.hash = 'home'
     },
 
     initialize: function() {
