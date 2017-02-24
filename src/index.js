@@ -2,6 +2,7 @@ import React from 'react'
 import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
 import Home from './components/home/Home'
+import Canvas from './components/canvas/Canvas'
 
 const app = function() {
     var Controller = Backbone.Router.extend({
@@ -13,12 +14,11 @@ const app = function() {
         },
 
         _handleHome: function() {
-            ReactDOM.render( <Home />, document.getElementById('root')
-            )
+            ReactDOM.render( <Home />, document.getElementById('root'))
         },
 
         _handleCanvas: function() {
-
+            ReactDOM.render(<Canvas/>, document.getElementById('root'))
         },
 
         _handleLogin: function() {
