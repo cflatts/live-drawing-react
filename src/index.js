@@ -1,8 +1,10 @@
 import React from 'react'
 import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
+
 import Home from './components/home/Home'
 import Canvas from './components/canvas/Canvas'
+import Login from './components/login/Login'
 
 const app = function() {
     var Controller = Backbone.Router.extend({
@@ -22,7 +24,7 @@ const app = function() {
         },
 
         _handleLogin: function() {
-
+            ReactDOM.render(<Login />, document.getElementById('root'))
         },
 
         _handleDefault: function() {
