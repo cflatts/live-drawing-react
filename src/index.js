@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react'
 import Backbone from 'backbone'
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import ReactDOM from 'react-dom'
+import Home from './components/home/Home'
 
 const app = function() {
     var Controller = Backbone.Router.extend({
@@ -14,7 +13,7 @@ const app = function() {
         },
 
         _handleHome: function() {
-            ReactDOM.render( <App />, document.getElementById('root')
+            ReactDOM.render( <Home />, document.getElementById('root')
             )
         },
 
