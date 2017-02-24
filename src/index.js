@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 
 
-const Controller = Backbone.Router.extend({
+var Controller = Backbone.Router.extend({
     routes: {
         'home': '_handleHome',
         'canvas': '_handleCanvas',
@@ -14,7 +14,8 @@ const Controller = Backbone.Router.extend({
     },
 
     _handleHome: function() {
-
+        ReactDOM.render( <App />, document.getElementById('root')
+        )
     },
 
     _handleCanvas: function() {
@@ -34,7 +35,4 @@ const Controller = Backbone.Router.extend({
     }
 })
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+var controller = new Controller()
