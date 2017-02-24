@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class NavBar extends Component {
     render() {
-        returns (
+        return (
             <div className = 'navBar'>
                 <h1>Hello, Caitlin</h1>
                 <nav>
