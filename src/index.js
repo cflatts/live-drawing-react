@@ -12,6 +12,10 @@ const Controller = Backbone.Router.extend({
         'login': '_handleLogin',
         '*default': '_handleDeafulat'
     },
+
+    initialize: function() {
+        Backbone.history.start()
+    }
 })
 
 ReactDOM.render(
