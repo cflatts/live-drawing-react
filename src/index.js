@@ -4,35 +4,36 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
+const app = function() {
+    var Controller = Backbone.Router.extend({
+        routes: {
+            'home': '_handleHome',
+            'canvas': '_handleCanvas',
+            'login': '_handleLogin',
+            '*default': '_handleDefault'
+        },
 
-var Controller = Backbone.Router.extend({
-    routes: {
-        'home': '_handleHome',
-        'canvas': '_handleCanvas',
-        'login': '_handleLogin',
-        '*default': '_handleDefault'
-    },
+        _handleHome: function() {
+            ReactDOM.render( <App />, document.getElementById('root')
+            )
+        },
 
-    _handleHome: function() {
-        ReactDOM.render( <App />, document.getElementById('root')
-        )
-    },
+        _handleCanvas: function() {
 
-    _handleCanvas: function() {
+        },
 
-    },
+        _handleLogin: function() {
 
-    _handleLogin: function() {
+        },
 
-    },
+        _handleDefault: function() {
+            location.hash = 'home'
+        },
 
-    _handleDefault: function() {
-        location.hash = 'home'
-    },
-
-    initialize: function() {
-        Backbone.history.start()
-    }
-})
-
-var controller = new Controller()
+        initialize: function() {
+            Backbone.history.start()
+        }
+    })
+    let controller = new Controller()
+}
+app()
