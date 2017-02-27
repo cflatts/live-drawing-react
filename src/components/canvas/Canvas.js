@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+
 import NavBar from '../navBar'
+import './Canvas.css'
 
 class Canvas extends Component {
     render() {

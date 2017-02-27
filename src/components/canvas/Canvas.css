@@ -1,0 +1,61 @@
+.drawingArea {
+    display: flex;
+    justify-content: center;
+}
+
+.drawingColors {
+    margin-top: 50px;
+}
+
+.drawingShapes {
+    margin-top: 50px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.shape {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 10px;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue
+}
+
+.purple {
+    background-color: purple;
+}
+
+.black {
+    background-color: black;
+}
+
+#myCanvas {
+    border: 1px solid purple;
+    margin: 50px auto;
+}
