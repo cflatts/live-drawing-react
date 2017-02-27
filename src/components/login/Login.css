@@ -1,9 +1,5 @@
-.login {
-    display: flex;
-    justify-content: center;
-}
-
 .signin {
+    display: inline-block;
     width: 600px;
     border: 5px solid purple;
     margin: 40px 20px;
