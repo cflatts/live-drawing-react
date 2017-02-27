@@ -6,7 +6,7 @@ import './Home.css'
 class Home extends Component {
     render() {
         return (
-            <div className = 'home'>
+            <div className='home'>
                 <NavBar />
                 <HomeComponent />
             </div>
@@ -17,7 +17,7 @@ class Home extends Component {
 class HomeComponent extends Home {
     render() {
         return (
-            <div className = 'homeComponent'>
+            <div className='homeComponent'>
                 <h1>Welcome to Live Draw</h1>
                 <h2>Paint along with other users!</h2>
             </div>
