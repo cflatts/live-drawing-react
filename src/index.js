@@ -36,6 +36,6 @@ const app = function() {
             Backbone.history.start()
         }
     })
-    let controller=new Controller()
+    new Controller()
 }
 app()
