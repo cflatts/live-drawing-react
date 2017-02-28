@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import NavBar from '../navBar'
 import './Canvas.css'
+import ACTIONS from '../../actions'
 
 class Canvas extends Component {
     render() {
@@ -37,7 +38,7 @@ class CanvasComponent extends Canvas {
                     <div className='shape erase' name='erase'>Erase</div>
                 </div>
 
-                <canvas id='myCanvas' width='1200' height='600'></canvas>
+                <canvas id='myCanvas' width='1200' height='600' onClick={ACTIONS.addDot}></canvas>
             </div>
         )
     }
