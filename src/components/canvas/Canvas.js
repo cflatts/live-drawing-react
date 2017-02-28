@@ -15,10 +15,11 @@ class Canvas extends Component {
 }
 
 class CanvasComponent extends Canvas {
+
     render() {
         return (
             <div className='drawingArea'>
-                <div className ='drawingColors'>
+                <div className='drawingColors'>
                     <div className='color red' name='red'></div>
                     <div className='color orange' name='orange'></div>
                     <div className='color yellow' name='yellow'></div>
