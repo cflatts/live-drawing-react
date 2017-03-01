@@ -2,6 +2,7 @@ import Backbone from 'backbone'
 import $ from 'jquery'
 
 export const ShapeModel = Backbone.Model.extend({
+    urlRoot: '/api/shapes',
     idAttribute: '_id'
 })
 
