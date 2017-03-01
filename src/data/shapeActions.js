@@ -1,3 +1,7 @@
+import ShapeDispatcher from './shapeDispatcher'
+import ShapeActionTypes from './shapeActionTypes'
+
+
 const ACTIONS = {
 
     addDot: function(evt) {
