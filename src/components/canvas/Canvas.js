@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import NavBar from '../navBar'
 import './Canvas.css'
-import ACTIONS from '../../actions'
+import ACTIONS from '../../data/shapeActions'
 
 class Canvas extends Component {
     render() {
