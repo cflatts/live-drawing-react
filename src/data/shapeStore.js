@@ -31,3 +31,5 @@ class ShapeStore extends ReduceStore {
         }
     }
 }
+
+export default new ShapeStore()
