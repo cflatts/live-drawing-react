@@ -15,6 +15,15 @@ class ShapeStore extends ReduceStore {
     reduce(state, action) {
         switch (action.type)) {
             case ShapeActionTypes.ADD_SHAPE:
+            //will add the code telling me to add the shapes
+            //     let myCanvas = evt.target
+            //     let ctx = myCanvas.getContext('2d')
+            //     let canvasLocation = myCanvas.getBoundingClientRect()
+            //
+            //     const x = evt.clientX - canvasLocation.left
+            //     const y = evt.clientY - canvasLocation.top
+            //     ctx.fillRect(x, y, 5, 5)
+
                 return state
                 break;
             default:
