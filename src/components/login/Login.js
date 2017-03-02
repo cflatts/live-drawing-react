@@ -3,18 +3,18 @@ import React, {Component} from 'react'
 import NavBar from '../navBar'
 import './Login.css'
 
-class Login extends Component {
+class LoginContainer extends Component {
     render() {
         return (
             <div className='login'>
                 <NavBar />
-                <LoginComponent />
+                <LoginView />
             </div>
         )
     }
 }
 
-class LoginComponent extends Login {
+class LoginView extends LoginContainer {
     render() {
         return (
             <div className='login'>
@@ -42,4 +42,4 @@ class LoginComponent extends Login {
     }
 }
 
-export default Login
+export default LoginContainer

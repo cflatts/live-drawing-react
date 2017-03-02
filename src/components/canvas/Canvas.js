@@ -4,18 +4,18 @@ import NavBar from '../navBar'
 import './Canvas.css'
 import ACTIONS from '../../data/shapeActions'
 
-class Canvas extends Component {
+class CanvasContainer extends Component {
     render() {
         return (
             <div className='canvas'>
                 <NavBar />
-                <CanvasComponent />
+                <CanvasView />
             </div>
         )
     }
 }
 
-class CanvasComponent extends Canvas {
+class CanvasView extends CanvasContainer {
 
     render() {
         return (
@@ -44,4 +44,4 @@ class CanvasComponent extends Canvas {
     }
 }
 
-export default Canvas
+export default CanvasContainer

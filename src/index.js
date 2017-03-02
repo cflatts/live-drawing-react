@@ -2,9 +2,9 @@ import React from 'react'
 import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
 
-import Home from './components/home/Home'
-import Canvas from './components/canvas/Canvas'
-import Login from './components/login/Login'
+import HomeContainer from './components/home/Home'
+import CanvasContainer from './components/canvas/Canvas'
+import LoginContainer from './components/login/Login'
 import './index.css'
 
 const app = function() {
@@ -17,15 +17,15 @@ const app = function() {
         },
 
         _handleHome: function() {
-            ReactDOM.render( <Home />, document.getElementById('root'))
+            ReactDOM.render( <HomeContainer />, document.getElementById('root'))
         },
 
         _handleCanvas: function() {
-            ReactDOM.render(<Canvas/>, document.getElementById('root'))
+            ReactDOM.render(<CanvasContainer/>, document.getElementById('root'))
         },
 
         _handleLogin: function() {
-            ReactDOM.render(<Login />, document.getElementById('root'))
+            ReactDOM.render(<LoginContainer />, document.getElementById('root'))
         },
 
         _handleDefault: function() {

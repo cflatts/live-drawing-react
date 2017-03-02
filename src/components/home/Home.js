@@ -3,18 +3,18 @@ import React, {Component} from 'react'
 import NavBar from '../navBar'
 import './Home.css'
 
-class Home extends Component {
+class HomeContainer extends Component {
     render() {
         return (
             <div className='home'>
                 <NavBar />
-                <HomeComponent />
+                <HomeView />
             </div>
         )
     }
 }
 
-class HomeComponent extends Home {
+class HomeView extends HomeContainer {
     render() {
         return (
             <div className='homeComponent'>
@@ -25,4 +25,4 @@ class HomeComponent extends Home {
     }
 }
 
-export default Home
+export default HomeContainer
