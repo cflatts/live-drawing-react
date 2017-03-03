@@ -25,12 +25,12 @@ class ShapeStore extends ReduceStore {
             //     ctx.fillRect(x, y, 5, 5)
 
                 return state
-                break;
+                // break;
             default:
                 return state
         }
     }
-    
+
 }
 
 export default new ShapeStore()
