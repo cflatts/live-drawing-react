@@ -3,7 +3,7 @@ import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
 
 import HomeContainer from './components/home/Home'
-import CanvasContainer from './components/canvas/Canvas'
+import CanvasContainer from './components/canvas/CanvasContainer'
 import LoginContainer from './components/login/Login'
 import './index.css'
 
