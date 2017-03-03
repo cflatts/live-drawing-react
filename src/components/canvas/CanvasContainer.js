@@ -11,7 +11,7 @@ class CanvasContainer extends Component {
         return [ShapeStore]
     }
 
-    calculateState(prevState) {
+    static calculateState(prevState) {
         return {
             //clearly just a temporary fix
             prevState
