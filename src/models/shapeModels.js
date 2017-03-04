@@ -11,4 +11,4 @@ export const ShapeCollection = Backbone.Collection.extend({
     model: ShapeModel
 })
 
-export {ShapeModel, ShapeCollection}
+export default {ShapeModel, ShapeCollection}
