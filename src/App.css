@@ -1,21 +1,9 @@
-h1 {
-    font-size: 48px;
-    color: purple;
-}
-
-.homeComponent {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.appRouter {
+/*.appRouter {
     display: flex;
     justify-content: center;
 }
 
-.appRouter .link {
+.appRouter a {
   padding: 5px 10px;
   text-decoration: none;
   margin: 10px 6px 0;
@@ -25,15 +13,15 @@ h1 {
   font-size: 24px;
 }
 
-.appRouter .link:visited, .link:link {
+.appRouter a:visited, a:link {
   color: #607D8B;
 }
 
-.appRouter .link:hover {
+.appRouter a:hover {
   color: #039be5;
   background-color: #CFD8DC;
 }
 
-.appRouter .link:active {
+.appRouter a:active {
   color: #039be5;
-}
+}*/
