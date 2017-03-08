@@ -7,7 +7,6 @@ class HomeContainer extends Component {
     render() {
         return (
             <div className='home'>
-                
                 <HomeView />
             </div>
         )

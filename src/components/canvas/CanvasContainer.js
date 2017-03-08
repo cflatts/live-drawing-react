@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import NavBar from '../navBar'
 import './Canvas.css'
 import CanvasView from './CanvasView'
 import {Container} from 'flux/utils'
@@ -21,7 +20,6 @@ class CanvasContainer extends Component {
     render() {
         return (
         <div className='canvasContainer'>
-            <NavBar/>
             <CanvasView />
         </div>
         )

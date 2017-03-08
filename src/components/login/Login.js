@@ -7,7 +7,6 @@ class LoginContainer extends Component {
     render() {
         return (
             <div className='login'>
-                <NavBar />
                 <LoginView />
             </div>
         )
