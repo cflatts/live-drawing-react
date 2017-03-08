@@ -7,9 +7,11 @@ class App extends Component {
     render() {
         return(
             <div className='appRouter'>
-                <Link className='link' to='/'>Home</Link>
-                <Link className='link' to='canvas'>Drawing Canvas</Link>
-                <Link className='link' to='login'>Login/SignIn</Link>
+                <div className='navBar'>
+                    <Link className='link' to='/'>Home</Link>
+                    <Link className='link' to='canvas'>Drawing Canvas</Link>
+                    <Link className='link' to='login'>Login/SignIn</Link>
+                </div>
                 {this.props.children || (
                     <div className='homeComponent'>
                         <h1>Welcome to Live Draw</h1>

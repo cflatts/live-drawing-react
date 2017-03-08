@@ -1,6 +1,18 @@
 h1 {
-    font-size: 48px;
+    font-size: 120px;
     color: purple;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+/*This is the parent of .navBar and .homeComponent*/
+.appRouter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .homeComponent {
@@ -8,11 +20,6 @@ h1 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-/*.appRouter {
-    display: flex;
-    justify-content: center;
 }
 
 .appRouter a {
@@ -36,4 +43,4 @@ h1 {
 
 .appRouter a:active {
   color: #039be5;
-}*/
+}
