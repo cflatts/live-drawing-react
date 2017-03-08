@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-
-import NavBar from '../navBar'
 import './Login.css'
 
 class LoginContainer extends Component {
