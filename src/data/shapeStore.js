@@ -1,9 +1,8 @@
 import Immutable from 'immutable'
 import {ReduceStore} from 'flux/utils'
-import Backbone from 'backbone'
 import ShapeActionTypes from './shapeActionTypes'
 import ShapeDispatcher from './shapeDispatcher'
-import {ShapeModel, ShapeCollection} from '../models/shapeModels'
+
 
 
 class ShapeStore extends ReduceStore {

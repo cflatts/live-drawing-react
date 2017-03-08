@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 
-import NavBar from '../navBar'
+// import NavBar from '../navBar'
 import './Home.css'
 
 class HomeContainer extends Component {
     render() {
         return (
             <div className='home'>
-                <NavBar />
+                
                 <HomeView />
             </div>
         )
