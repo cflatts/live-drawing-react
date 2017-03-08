@@ -1,3 +1,8 @@
+h1 {
+    font-size: 48px;
+    color: purple;
+}
+
 .homeComponent {
     display: flex;
     justify-content: center;
@@ -5,7 +10,30 @@
     align-items: center;
 }
 
-h1 {
-    font-size: 48px;
-    color: purple;
+.appRouter {
+    display: flex;
+    justify-content: center;
+}
+
+.appRouter .link {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 10px 6px 0;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.appRouter .link:visited, .link:link {
+  color: #607D8B;
+}
+
+.appRouter .link:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+.appRouter .link:active {
+  color: #039be5;
 }
