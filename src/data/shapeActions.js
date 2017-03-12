@@ -1,14 +1,13 @@
 import ShapeDispatcher from './shapeDispatcher'
 import ShapeActionTypes from './shapeActionTypes'
 
-
 const ACTIONS = {
 
-    addShape() {
-        ShapeDispatcher.dispatch({
-            type: ShapeActionTypes.ADD_SHAPE
-        })
-    }
+  addShape () {
+    ShapeDispatcher.dispatch({
+      type: ShapeActionTypes.ADD_SHAPE
+    })
+  }
 
     // addDot: function(evt) {
     //     let myCanvas = evt.target

@@ -8,10 +8,10 @@ import App from './App'
 import './index.css'
 
 ReactDOM.render((
-    <Router history={hashHistory}>
-        <Route path='/' component={App}>
-            <Route path='/canvas' component={CanvasContainer} />
-            <Route path='/login' component={LoginContainer} />
-        </Route>
-    </Router>
+  <Router history={hashHistory}>
+    <Route path='/' component={App}>
+      <Route path='/canvas' component={CanvasContainer} />
+      <Route path='/login' component={LoginContainer} />
+    </Route>
+  </Router>
 ), document.getElementById('root'))

@@ -6,24 +6,24 @@ import ShapeStore from '../../data/shapeStore'
 
 class CanvasContainer extends Component {
 
-    static getStores() {
-        return [ShapeStore]
-    }
+  static getStores () {
+    return [ShapeStore]
+  }
 
-    static calculateState(prevState) {
-        return {
-            //clearly just a temporary fix
-            prevState
-        }
+  static calculateState (prevState) {
+    return {
+        //clearly just a temporary fix
+      prevState
     }
+  }
 
-    render() {
-        return (
-        <div className='canvasContainer'>
-            <CanvasView />
-        </div>
-        )
-    }
+  render () {
+    return (
+      <div className='canvasContainer'>
+        <CanvasView />
+      </div>
+    )
+  }
 }
 
 export default Container.create(CanvasContainer)
