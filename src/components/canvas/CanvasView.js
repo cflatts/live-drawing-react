@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
-import ACTIONS from '../../data/shapeActions'
 
 class CanvasView extends Component {
+  constructor (props) {
+    super(props)
+    console.log(props)
+  }
 
   render () {
     return (
