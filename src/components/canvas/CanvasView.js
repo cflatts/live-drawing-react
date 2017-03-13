@@ -24,7 +24,7 @@ class CanvasView extends Component {
           <div className='shape erase' name='erase'>Erase</div>
         </div>
 
-        <canvas id='myCanvas' width='1200' height='600' onClick={ACTIONS.addDot} />
+        <canvas id='myCanvas' width='1200' height='600' />
       </div>
     )
   }

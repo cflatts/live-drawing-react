@@ -12,16 +12,13 @@ class CanvasContainer extends Component {
 
   static calculateState (prevState) {
     return {
-        //clearly just a temporary fix
-      prevState
+      shapes: ShapeStore.getState()
     }
   }
 
   render () {
     return (
-      <div className='canvasContainer'>
-        <CanvasView />
-      </div>
+      <CanvasView shapes={this.state.shapes} />
     )
   }
 }
