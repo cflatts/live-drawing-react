@@ -8,8 +8,11 @@ import Shape from './shape'
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
+  }
 
-    this.state = Immutable.Map()
+  getInitialState () {
+    // eventually this should be populated with shapes that have been saved
+    return Immutable.Map()
   }
 
   reduce (state, action) {
