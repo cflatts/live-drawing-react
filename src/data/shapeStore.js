@@ -7,12 +7,17 @@ class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
 
-    this.state = Immutable.List()
+    this.state = Immutable.Map()
   }
 
   reduce (state, action) {
     switch (action.type) {
       case ShapeActionTypes.ADD_SHAPE:
+
+      // nothing happens if x and y don't exist
+        if (!action.x && !action.y) {
+          return state
+        }
           // will add the code telling me to add the shapes
           //     let myCanvas = evt.target
           //     let ctx = myCanvas.getContext('2d')
