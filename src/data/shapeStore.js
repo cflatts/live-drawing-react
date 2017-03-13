@@ -6,10 +6,8 @@ import ShapeDispatcher from './shapeDispatcher'
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
-  }
 
-  getInitialState () {
-    return Immutable.OrderedMap()
+    this.state = Immutable.List()
   }
 
   reduce (state, action) {
