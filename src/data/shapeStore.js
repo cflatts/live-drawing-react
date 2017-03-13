@@ -2,6 +2,8 @@ import Immutable from 'immutable'
 import {ReduceStore} from 'flux/utils'
 import ShapeActionTypes from './shapeActionTypes'
 import ShapeDispatcher from './shapeDispatcher'
+import Counter from './counter'
+import Shape from './shape'
 
 class ShapeStore extends ReduceStore {
   constructor () {
@@ -18,6 +20,12 @@ class ShapeStore extends ReduceStore {
         if (!action.x && !action.y) {
           return state
         }
+        const id = Counter.increment()
+        state.set(id, new Shape({
+          id,
+          x: action.x,
+          y: action.y
+        }))
           // will add the code telling me to add the shapes
           //     let myCanvas = evt.target
           //     let ctx = myCanvas.getContext('2d')
