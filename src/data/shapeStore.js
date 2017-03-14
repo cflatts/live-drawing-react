@@ -8,6 +8,8 @@ import Shape from './shape'
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
+    console.log(this)
+    console.log(ShapeDispatcher)
   }
 
   getInitialState () {
@@ -18,7 +20,8 @@ class ShapeStore extends ReduceStore {
   reduce (state, action) {
     switch (action.type) {
       case ShapeActionTypes.ADD_SHAPE:
-
+        console.log('this is state in store', state)
+        console.log('this is action in store', action)
       // nothing happens if x and y don't exist
         if (!action.x && !action.y) {
           return state

@@ -3,9 +3,11 @@ import ShapeActionTypes from './shapeActionTypes'
 
 const ACTIONS = {
 
-  addShape () {
+  addShape (x, y) {
     ShapeDispatcher.dispatch({
-      type: ShapeActionTypes.ADD_SHAPE
+      type: ShapeActionTypes.ADD_SHAPE,
+      x,
+      y
     })
   }
 
