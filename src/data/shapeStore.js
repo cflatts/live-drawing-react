@@ -8,8 +8,6 @@ import Shape from './shape'
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
-    console.log(this)
-    console.log(ShapeDispatcher)
   }
 
   getInitialState () {
