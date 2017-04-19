@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import ACTIONS from '../../data/shapeActions'
+// import Immutable from 'immutable'
 
 class CanvasView extends Component {
   constructor (props) {
     super(props)
-    console.log('canvas view props', props)
+    console.log(props)
   }
 
   _handleShapeAdd (evt) {
@@ -14,6 +15,10 @@ class CanvasView extends Component {
     const x = evt.clientX - canvasLocation.left
     const y = evt.clientY - canvasLocation.top
     ACTIONS.addShape(x, y)
+  }
+
+  _renderData () {
+
   }
 
   render () {
