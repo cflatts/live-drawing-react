@@ -4,7 +4,7 @@ import ACTIONS from '../../data/shapeActions'
 class CanvasView extends Component {
   constructor (props) {
     super(props)
-    console.log(props)
+    console.log('canvas view props', props)
   }
 
   _handleShapeAdd (evt) {

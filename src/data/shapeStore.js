@@ -5,42 +5,35 @@ import ShapeDispatcher from './shapeDispatcher'
 import Counter from './counter'
 import Shape from './shape'
 
+window.Imm = Immutable
+
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
   }
 
   getInitialState () {
-    // eventually this should be populated with shapes that have been saved
+    // eventually this should be populated with shapes that have been saved, right now it returns a new immutable Map object
     return Immutable.Map()
   }
 
   reduce (state, action) {
     switch (action.type) {
       case ShapeActionTypes.ADD_SHAPE:
-        console.log('this is state in store', state)
-        console.log('this is action in store', action)
       // nothing happens if x and y don't exist
         if (!action.x && !action.y) {
+          console.log('this is state with no x, y values', state)
           return state
         }
         const id = Counter.increment()
-        state.set(id, new Shape({
+        const shape = new Shape({
           id,
           x: action.x,
           y: action.y
-        }))
-          // will add the code telling me to add the shapes
-          //     let myCanvas = evt.target
-          //     let ctx = myCanvas.getContext('2d')
-          //     let canvasLocation = myCanvas.getBoundingClientRect()
-          //
-          //     const x = evt.clientX - canvasLocation.left
-          //     const y = evt.clientY - canvasLocation.top
-          //     ctx.fillRect(x, y, 5, 5)
-
-        return state
-              // break;
+        })
+        let newState = state.set(id, shape)
+        return newState
+        // break
       default:
         return state
     }
