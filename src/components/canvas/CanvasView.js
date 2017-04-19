@@ -7,6 +7,15 @@ class CanvasView extends Component {
     console.log(props)
   }
 
+  _handleShapeAdd (evt) {
+    let myCanvas = evt.target
+    let canvasLocation = myCanvas.getBoundingClientRect()
+
+    const x = evt.clientX - canvasLocation.left
+    const y = evt.clientY - canvasLocation.top
+    ACTIONS.addShape(x, y)
+  }
+
   render () {
     return (
       <div className='drawingArea'>
@@ -28,7 +37,7 @@ class CanvasView extends Component {
           <div className='shape erase' name='erase'>Erase</div>
         </div>
 
-        <canvas id='myCanvas' width='1200' height='600' onClick={ACTIONS.addShape} />
+        <canvas id='myCanvas' width='1200' height='600' onClick={this._handleShapeAdd} />
       </div>
     )
   }
