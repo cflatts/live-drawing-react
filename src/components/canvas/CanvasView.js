@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 class CanvasView extends Component {
-  constructor (props, state) {
+  constructor (props) {
     super(props)
     console.log(props)
   }
