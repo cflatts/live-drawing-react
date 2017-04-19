@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ACTIONS from '../../data/shapeActions'
 
 class CanvasView extends Component {
   constructor (props) {
@@ -27,7 +28,7 @@ class CanvasView extends Component {
           <div className='shape erase' name='erase'>Erase</div>
         </div>
 
-        <canvas id='myCanvas' width='1200' height='600' />
+        <canvas id='myCanvas' width='1200' height='600' onClick={ACTIONS.addShape} />
       </div>
     )
   }
