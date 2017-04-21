@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import ACTIONS from '../../data/shapeActions'
-// import Immutable from 'immutable'
+import $ from 'jquery'
 
 class CanvasView extends Component {
   constructor (props) {
     super(props)
-    console.log(props)
+    console.log(this.props)
   }
 
   _handleShapeAdd (evt) {
@@ -17,13 +17,28 @@ class CanvasView extends Component {
     ACTIONS.addShape(x, y)
   }
 
-  _renderData () {
+  _renderShapes (shapesObj) {
+    if (shapesObj.shapes._root === undefined) {
+      console.log('it is undefined')
+    } else {
+      let shapesArr = shapesObj.shapes._root.entries
 
+      shapesArr.map(function (shape) {
+        let myCanvas = $('#myCanvas')[0]
+        let ctx = myCanvas.getContext('2d')
+
+        const x = shape[1].x
+        const y = shape[1].y
+
+        ctx.fillRect(x, y, 5, 5)
+      })
+    }
   }
 
   render () {
     return (
       <div className='drawingArea'>
+        {this._renderShapes(this.props)}
         <div className='drawingColors'>
           <div className='color red' name='red' />
           <div className='color orange' name='orange' />
