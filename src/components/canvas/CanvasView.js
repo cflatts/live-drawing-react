@@ -46,6 +46,7 @@ class CanvasView extends Component {
           <div className='shape circle' name='circle'>Circ</div>
           <div className='shape rectangle' name='rectangle'>Rect</div>
           <div className='shape triangle' name='triangle'>Tri</div>
+          <div className='shape dot' name='dot'>Dot</div>
           <div className='shape freestyle' name='freestyle'>Free</div>
           <div className='shape erase' name='erase'>Erase</div>
         </div>
