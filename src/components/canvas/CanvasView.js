@@ -37,6 +37,8 @@ class CanvasView extends Component {
           <div className='color green' name='green' />
           <div className='color blue' name='blue' />
           <div className='color purple' name='purple' />
+          <div className='color black' name='black' />
+          <div className='color white' name='white' />
         </div>
 
         <div className='drawingShapes'>
