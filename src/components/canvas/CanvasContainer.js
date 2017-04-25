@@ -5,7 +5,6 @@ import {Container} from 'flux/utils'
 import ShapeStore from '../../data/shapeStore'
 
 class CanvasContainer extends Component {
-
   static getStores () {
     return [ShapeStore]
   }

@@ -3,10 +3,10 @@ import ACTIONS from '../../data/shapeActions'
 import $ from 'jquery'
 
 class CanvasView extends Component {
-  // constructor (props) {
-  //   super(props)
-  //   console.log(this.props)
-  // }
+  constructor (props) {
+    super(props)
+    console.log(this.props)
+  }
 
   _handleShapeAdd (evt) {
     let myCanvas = evt.target
@@ -20,15 +20,26 @@ class CanvasView extends Component {
   _renderShapes (shapesObj) {
     if (shapesObj.shapes._root === undefined) {
       console.log('it is undefined')
-    } else {
+    } else if (shapesObj.shapes._root.entries) {
       let shapesArr = shapesObj.shapes._root.entries
-      console.log(shapesObj.shapes.entries())
-      shapesArr.map(function (shape) {
+      shapesArr.forEach(function (shape) {
         let myCanvas = $('#myCanvas')[0]
         let ctx = myCanvas.getContext('2d')
 
         const x = shape[1].x
         const y = shape[1].y
+
+        ctx.fillRect(x, y, 5, 5)
+      })
+    } else {
+      let shapesArr = shapesObj.shapes._root.nodes
+      shapesArr.forEach(function (shape) {
+        let newShape = shape.entry[1]
+        let myCanvas = $('#myCanvas')[0]
+        let ctx = myCanvas.getContext('2d')
+
+        const x = newShape.x
+        const y = newShape.y
 
         ctx.fillRect(x, y, 5, 5)
       })

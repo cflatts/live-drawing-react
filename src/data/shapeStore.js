@@ -38,7 +38,6 @@ class ShapeStore extends ReduceStore {
         return state
     }
   }
-
 }
 
 export default new ShapeStore()
