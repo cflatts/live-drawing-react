@@ -1,13 +1,8 @@
 import React, {Component} from 'react'
 import ACTIONS from '../../data/shapeActions'
 import $ from 'jquery'
-// import Immutable from 'immutable'
 
 class CanvasView extends Component {
-  constructor (props) {
-    super(props)
-    console.log(this.props)
-  }
 
   _handleShapeAdd (evt) {
     let myCanvas = evt.target
