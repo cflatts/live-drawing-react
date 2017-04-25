@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ACTIONS from '../../data/shapeActions'
 import $ from 'jquery'
+// import Immutable from 'immutable'
 
 class CanvasView extends Component {
   constructor (props) {
@@ -18,32 +19,16 @@ class CanvasView extends Component {
   }
 
   _renderShapes (shapesObj) {
-    if (shapesObj.shapes._root === undefined) {
-      console.log('it is undefined')
-    } else if (shapesObj.shapes._root.entries) {
-      let shapesArr = shapesObj.shapes._root.entries
-      shapesArr.forEach(function (shape) {
-        let myCanvas = $('#myCanvas')[0]
-        let ctx = myCanvas.getContext('2d')
+    let shapesArr = shapesObj.shapes.toArray()
+    shapesArr.forEach(function (shape) {
+      let myCanvas = $('#myCanvas')[0]
+      let ctx = myCanvas.getContext('2d')
 
-        const x = shape[1].x
-        const y = shape[1].y
+      const x = shape.x
+      const y = shape.y
 
-        ctx.fillRect(x, y, 5, 5)
-      })
-    } else {
-      let shapesArr = shapesObj.shapes._root.nodes
-      shapesArr.forEach(function (shape) {
-        let newShape = shape.entry[1]
-        let myCanvas = $('#myCanvas')[0]
-        let ctx = myCanvas.getContext('2d')
-
-        const x = newShape.x
-        const y = newShape.y
-
-        ctx.fillRect(x, y, 5, 5)
-      })
-    }
+      ctx.fillRect(x, y, 5, 5)
+    })
   }
 
   render () {
