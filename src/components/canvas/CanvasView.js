@@ -22,23 +22,24 @@ class CanvasView extends Component {
       console.log('it is undefined')
     } else {
       let shapesArr = shapesObj.shapes._root.entries
-
-      shapesArr.forEach(function (shape) {
+      console.log(shapesObj.shapes.entries())
+      shapesArr.map(function (shape) {
         let myCanvas = $('#myCanvas')[0]
         let ctx = myCanvas.getContext('2d')
+        let canvasLocation = myCanvas.getBoundingClientRect()
 
         const x = shape[1].x
         const y = shape[1].y
 
         ctx.fillRect(x, y, 5, 5)
       })
-      console.log(shapesArr)
     }
   }
 
   render () {
     return (
       <div className='drawingArea'>
+        {this._renderShapes(this.props)}
         <div className='drawingColors'>
           <div className='color red' name='red' />
           <div className='color orange' name='orange' />
@@ -56,7 +57,7 @@ class CanvasView extends Component {
           <div className='shape freestyle' name='freestyle'>Free</div>
           <div className='shape erase' name='erase'>Erase</div>
         </div>
-        {this._renderShapes(this.props)}
+
         <canvas id='myCanvas' width='1200' height='600' onClick={this._handleShapeAdd} />
       </div>
     )
