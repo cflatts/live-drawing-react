@@ -3,10 +3,10 @@ import ACTIONS from '../../data/shapeActions'
 import $ from 'jquery'
 
 class CanvasView extends Component {
-  constructor (props) {
-    super(props)
-    console.log(this.props)
-  }
+  // constructor (props) {
+  //   super(props)
+  //   console.log(this.props)
+  // }
 
   _handleShapeAdd (evt) {
     let myCanvas = evt.target
@@ -26,7 +26,6 @@ class CanvasView extends Component {
       shapesArr.map(function (shape) {
         let myCanvas = $('#myCanvas')[0]
         let ctx = myCanvas.getContext('2d')
-        let canvasLocation = myCanvas.getBoundingClientRect()
 
         const x = shape[1].x
         const y = shape[1].y
