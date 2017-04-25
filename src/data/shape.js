@@ -3,7 +3,9 @@ import Immutable from 'immutable'
 const Shape = Immutable.Record({
   id: '',
   x: '',
-  y: ''
+  y: '',
+  color: '',
+  shape: ''
 })
 
 export default Shape
