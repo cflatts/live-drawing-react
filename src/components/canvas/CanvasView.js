@@ -15,7 +15,9 @@ class CanvasView extends Component {
 
     const x = evt.clientX - canvasLocation.left
     const y = evt.clientY - canvasLocation.top
-    ACTIONS.addShape(x, y)
+    const color = this.getColor()
+
+    ACTIONS.addShape(x, y, color)
   }
 
   _renderShapes (shapesObj) {
@@ -31,17 +33,19 @@ class CanvasView extends Component {
     })
   }
 
-  // _getColor (evt) {
-  //   evt.preventDefault()
-  //   let colorVal = evt.target.getAttribute('name')
-  //   return colorVal
-  // }
+  _getColor (evt) {
+    evt.preventDefault()
+    let colorVal = evt.target.getAttribute('name')
+    this.color = colorVal
+    return colorVal
+  }
 
   render () {
+    console.log(this.color)
     return (
       <div className='drawingArea'>
         {this._renderShapes(this.props)}
-        <div className='drawingColors'>
+        <div className='drawingColors' onClick={this._getColor}>
           <div className='color red' name='red' />
           <div className='color orange' name='orange' />
           <div className='color yellow' name='yellow' />

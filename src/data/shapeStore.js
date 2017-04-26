@@ -31,7 +31,7 @@ class ShapeStore extends ReduceStore {
         })
         let newState = state.set(id, shape)
         return newState
-        // break
+
       default:
         return state
     }
