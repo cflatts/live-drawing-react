@@ -4,8 +4,7 @@ const Shape = Immutable.Record({
   id: '',
   x: '',
   y: '',
-  color: '',
-  shape: ''
+  color: ''
 })
 
 export default Shape

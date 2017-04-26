@@ -5,11 +5,11 @@ import $ from 'jquery'
 class CanvasView extends Component {
   constructor (props) {
     super(props)
-    console.log(props)
     this.color = this.props.color
   }
 
   _handleShapeAdd (evt) {
+    evt.preventDefault()
     let myCanvas = evt.target
     let canvasLocation = myCanvas.getBoundingClientRect()
 
@@ -31,11 +31,17 @@ class CanvasView extends Component {
     })
   }
 
+  _getColor (evt) {
+    evt.preventDefault()
+    let colorVal = evt.target.getAttribute('name')
+    return colorVal
+  }
+
   render () {
     return (
       <div className='drawingArea'>
         {this._renderShapes(this.props)}
-        <div className='drawingColors'>
+        <div className='drawingColors' onClick={this._getColor}>
           <div className='color red' name='red' />
           <div className='color orange' name='orange' />
           <div className='color yellow' name='yellow' />
