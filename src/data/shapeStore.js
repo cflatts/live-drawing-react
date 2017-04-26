@@ -5,8 +5,6 @@ import ShapeDispatcher from './shapeDispatcher'
 import Counter from './counter'
 import Shape from './shape'
 
-window.Imm = Immutable
-
 class ShapeStore extends ReduceStore {
   constructor () {
     super(ShapeDispatcher)
