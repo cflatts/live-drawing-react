@@ -31,17 +31,17 @@ class CanvasView extends Component {
     })
   }
 
-  _getColor (evt) {
-    evt.preventDefault()
-    let colorVal = evt.target.getAttribute('name')
-    return colorVal
-  }
+  // _getColor (evt) {
+  //   evt.preventDefault()
+  //   let colorVal = evt.target.getAttribute('name')
+  //   return colorVal
+  // }
 
   render () {
     return (
       <div className='drawingArea'>
         {this._renderShapes(this.props)}
-        <div className='drawingColors' onClick={this._getColor}>
+        <div className='drawingColors'>
           <div className='color red' name='red' />
           <div className='color orange' name='orange' />
           <div className='color yellow' name='yellow' />
