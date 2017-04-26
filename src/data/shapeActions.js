@@ -9,6 +9,13 @@ const ACTIONS = {
       x,
       y
     })
+  },
+
+  changeColor (color) {
+    ShapeDispatcher.dispatch({
+      type: ShapeActionTypes.CHANGE_COLOR,
+      color
+    })
   }
 }
 
