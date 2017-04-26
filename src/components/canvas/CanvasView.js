@@ -3,6 +3,11 @@ import ACTIONS from '../../data/shapeActions'
 import $ from 'jquery'
 
 class CanvasView extends Component {
+  constructor (props) {
+    super(props)
+    console.log(props)
+    this.color = this.props.color
+  }
 
   _handleShapeAdd (evt) {
     let myCanvas = evt.target
